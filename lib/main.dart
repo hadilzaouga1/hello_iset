@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// le Hot Reload c'est une fonctionnalité de Flutter qui permet de voir les modifications de code
 // lib/ contient le code source de l'application (Dart)
 // android/ contient les fichiers spécifiques à la platforme android
 // web/ contient les fichiers spécifiques à la version web de l'application
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Mon premier projet - Hadil Zaouga',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(seedColor: Colors.deepOrangeAccent),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -75,6 +76,20 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decrementCounter() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      }
+    });
+  }
+
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -107,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          //
           // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
@@ -121,10 +135,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            heroTag: 'dec',
+            onPressed: _decrementCounter,
+            child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            heroTag: 'reset',
+            onPressed: _resetCounter,
+            child: const Icon(Icons.refresh),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            heroTag: 'inc',
+            onPressed: _incrementCounter,
+            child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }
