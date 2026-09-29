@@ -127,11 +127,22 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: .center,
           children: [
-            const Text('Compteur'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            const CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.green,
+              child: Icon(Icons.person, size: 50, color: Colors.white),
             ),
+            const SizedBox(height: 16),
+            const Text(
+              'Hadil Zaouga',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text('DSI'),
+            const SizedBox(height: 8),
+            const Text('hadilzaouga594@gmail.com'),
+            const SizedBox(height: 24),
+            Text('Compteur: $_counter'),
           ],
         ),
       ),
