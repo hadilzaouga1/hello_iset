@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
+// lib/ contient le code source de l'application (Dart)
+// android/ contient les fichiers spécifiques à la platforme android
+// web/ contient les fichiers spécifiques à la version web de l'application
+// pubspec.yzml contient les information sur le projet c'est à dire c'est le fichier de configuration du projet (dépendances, assets, etc)
+// Le main c'est le point d'entrée de l'application. et pour executer l'application on utilise la fonction runApp()
+//Le MaterialApp est un widget racine qui configure le thème, le titre et la page d'accueil de l'application et elle fournit des fonctionnalités de navigation
+//Le setState() c'est une fonction qui met à jour l'interface utilisateur quand les données changent
 void main() {
+  // Cette fonction lance l'application Flutter en affichant le widget racine. le mot clé const est utilisé pour indiquer que le widget MyApp est immuable
   runApp(const MyApp());
 }
 
@@ -75,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    //Le Scaffold c'est la structure visuelle de base comme les AppBar, body...
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
