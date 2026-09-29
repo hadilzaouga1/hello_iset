@@ -1,16 +1,16 @@
-# hello_iset
+# Projet Hello ISET
 
-A new Flutter project.
+## Informations
+- **Nom** : [Zaouga]
+- **Prénom** : [Hadil]
+- **Groupe** : [DSI33]
 
-## Getting Started
+## Capture d'écran de l'application
 
-This project is a starting point for a Flutter application.
+![Capture d'écran de l'application](capture.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Description
+Application Flutter réalisée dans le cadre du cours Cross-Platform.
+Elle contient :
+- Un compteur avec boutons +, -, et réinitialisation
+- Une carte de profil (avatar, nom, spécialité, email)
